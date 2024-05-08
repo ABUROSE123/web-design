@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Website</title>
+<style>
+body {
+font-family: Arial, sans-serif; margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+}
+header {
+background-color: #333; color: #fff;
+padding: 20px; text-align: center;
+}
+nav {
+background-color: #444; color: #fff;
+padding: 10px; text-align: center;
+}
+nav a {
+color: #fff;
+text-decoration: none; padding: 10px 20px;
+
+}
+nav a:hover {
+background-color: #555;
+}
+section { padding: 20px;
+text-align: center;
+}
+footer {
+background-color: #333; color: #fff;
+padding: 20px; text-align: center;
+}
+.hidden { display: none;
+}
+.food-item {
+margin-bottom: 20px; text-align: center;
+}
+.food-item img {
+
+
+width: 300px; height: 300px; border-radius: 8px; margin-left: 30px;
+
+
+
+}
+ 
+
+</style>
+</head>
+<body>
+
+
+<header>
+<h1>Welcome to SS Foods</h1>
+</header>
+
+
+<nav>
+<a href="#" onclick="showMenu()">Menu</a>
+<a href="#" onclick="showAbout()">About Us</a>
+<a href="#" onclick="showContact()">Contact</a>
+</nav>
+
+
+<section id="menuSection" class="hidden">
+<h2>Menu</h2>
+<div class="food-item">
+<h3>Chicken Biryani</h3>
+<img src="https://i0.wp.com/blendofspicesbysara.com/wp- content/uploads/2020/10/PXL_20201011_200951855.PORTRAIT-01.jpeg?resize=800%2C840&ssl=1" alt="Chicken Biryani">
+<p>chicken biriyani</p>
+<button onclick="orderItem('Chicken Biryani', 120)">Order</button>
+</div>
+<div class="food-item">
+<h3>Mutton Biryani</h3>
+<img src="https://www.kannammacooks.com/wp-content/uploads/Tamil-style-mutton-biryani-pic.jpg" alt="Mutton Biryani">
+<p>Mutton Biryani</p>
+<button onclick="orderItem('Mutton Biryani', 150)">Order</button>
+
+ 
+</div>
+<div class="food-item">
+<h3>Vegetable Biryani</h3>
+<img  src="https://www.flavorquotient.com/wp-content/uploads/2016/10/Vegetable-Biryani-FQ-6-1-of-
+1.jpg" alt="Vegetable Biryani">
+<p>Vegetable Biryani</p>
+<button onclick="orderItem('Vegetable Biryani', 100)">Order</button>
+</div>
+<!-- Add more food items here -->
+<div class="food-item">
+<h3>Paneer Tikka</h3>
+<img src="https://media- cdn2.greatbritishchefs.com/media/i0fckzol/img16448.whqc_768x512q80fpt489fpl526.jpg" alt="Paneer Tikka">
+<p>Paneer Tikka</p>
+<button onclick="orderItem('Paneer Tikka', 800)">Order</button>
+</div>
+<div class="food-item">
+<h3>Butter Chicken</h3>
+<img src="https://www.licious.in/blog/wp-content/uploads/2020/10/butter-chicken--600x600.jpg" alt="Butter Chicken">
+<p>Butter Chicken</p>
+<button onclick="orderItem('Butter Chicken', 140)">Order</button>
+</div>
+<div class="food-item">
+<h3>Chicken Tikka Masala</h3>
+<img src="https://static.toiimg.com/thumb/53206247.cms?imgsize=295868&width=800&height=800" alt="Chicken Tikka Masala">
+<p>Chicken Tikka Masala</p>
+<button onclick="orderItem('Chicken Tikka Masala', 16)">Order</button>
+</div>
+<div class="food-item">
+<h3>Palak Paneer</h3>
+ 
+<img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/06/palak-paneer-3.jpg" alt="Palak Paneer">
+<p>Palak Paneer</p>
+<button onclick="orderItem('Palak Paneer', 110)">Order</button>
+</div>
+<div class="food-item">
+<h3>Chole Bhature</h3>
+<img src="https://media.vogue.in/wp-content/uploads/2020/08/chole-bhature-recipe.jpg" alt="Chole Bhature">
+<p>Chole Bhature</p>
+<button onclick="orderItem('Chole Bhature', 90)">Order</button>
+</div>
+<div class="food-item">
+<h3>Hyderabadi Dum Biryani</h3>
+<img src="https://www.licious.in/blog/wp-content/uploads/2022/06/chicken-hyderabadi-biryani-01.jpg" alt="Hyderabadi Dum Biryani">
+<p>Hyderabadi Dum Biryani</p>
+<button onclick="orderItem('Hyderabadi Dum Biryani', 180)">Order</button>
+</div>
+<div class="food-item">
+<h3>Pizza Margherita</h3>
+<img src="https://www.kagomeindia.com/wp-content/uploads/Pizza-Margherita-_large.jpg" alt="Pizza Margherita">
+<p>Pizza Margherita</p>
+<button onclick="orderItem('Pizza Margherita', 130)">Order</button>
+</div>
+<div class="food-item">
+<h3>Spaghetti Carbonara</h3>
+<img  src="https://img.taste.com.au/MwTc0Uee/taste/2016/12/best-easy-spaghetti-carbonara-193147-
+2.jpg" alt="Spaghetti Carbonara">
+<p>Spaghetti Carbonara</p>
+<button onclick="orderItem('Spaghetti Carbonara', 170)">Order</button>
+
+ 
+</div>
+<div class="food-item">
+<h3>Sushi Roll</h3>
+<img src="https://www.allrecipes.com/thmb/PujANugNXQW7ugnivQt8b4_- 13k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/RM-169856- CreamCheeseandCrabSushiRolls-ddmfs-3x4-6421-8d233e210db3458f8574bafad1c69e70.jpg" alt="Sushi Roll">
+<p>Sushi Roll</p>
+<button onclick="orderItem('Sushi Roll', 200)">Order</button>
+</div>
+<div class="food-item">
+<h3>Pad Thai</h3>
+<img src="https://pinchofyum.com/wp-content/uploads/Vegetarian-Pad-Thai-Recipe.jpg" alt="Pad
+ 
+Thai">
+ 
+
+<p>Pad Thai</p>
+<button onclick="orderItem('Pad Thai', 190)">Order</button>
+ 
+</div>
+<div class="food-item">
+<h3>Tacos</h3>
+<img src="https://mojo.generalmills.com/api/public/content/GmHhoT5mr0Sue2oMxdyEig_gmi_hi_res_jpeg.jpeg?v= fdaa7c14&t=466b54bb264e48b199fc8e83ef1136b4" alt="Tacos">
+<p>Tacos</p>
+<button onclick="orderItem('Tacos', 150)">Order</button>
+</div>
+<div class="food-item">
+<h3>Shrimp Scampi</h3>
+<img src="https://www.foodnetwork.com/content/dam/images/food/fullset/2009/1/13/1/vday_shrimpscampi_4493_s4 x3.jpg" alt="Shrimp Scampi">
+<p>Shrimp Scampi</p>
+<button onclick="orderItem('Shrimp Scampi', 220)">Order</button>
+</div>
+ 
+</section>
+
+
+<section id="aboutSection" class="hidden">
+<h2>About Us</h2>
+<p>We are a family-owned restaurant dedicated to providing delicious meals made with fresh, high-quality ingredients. Our mission is to create memorable dining experiences for our customers.</p>
+<p>At our restaurant, we pride ourselves on our exceptional service and cozy atmosphere. Whether you're joining us for a casual lunch or a special dinner, we aim to make every visit enjoyable.</p>
+<p>Thank you for choosing our restaurant. We look forward to serving you!</p>
+</section>
+
+
+<section id="contactSection" class="hidden">
+<h2>Contact Us</h2>
+<p>Address: ghandhi street, coimbatore, India</p>
+<p>Phone: 9344523561,9856453231</p>
+<p>Email: ourresturant@restaurant.com</p>
+</section>
+
+
+<section id="orderSection" class="hidden">
+<h2>Your Order</h2>
+<ul id="orderList">
+</ul>
+<p>Total Amount: $<span id="totalAmount">0</span></p>
+</section>
+
+
+<footer>
+<p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+</footer>
+
+
+<script>
+var order = [];
+
+ 
+var totalAmount = 0;
+
+
+function showMenu() {
+var menuSection = document.getElementById("menuSection"); menuSection.classList.remove("hidden"); showFoodItemImages();
+}
+
+
+function showAbout() {
+var aboutSection = document.getElementById("aboutSection"); aboutSection.classList.remove("hidden");
+hideMenu();
+}
+
+
+function showContact() {
+var contactSection = document.getElementById("contactSection"); contactSection.classList.remove("hidden");
+hideMenu();
+}
+
+
+function orderItem(itemName, price) { order.push({name: itemName, price: price}); totalAmount += price;
+updateOrder();
+}
+
+
+function updateOrder() {
+var orderList = document.getElementById("orderList");
+var totalAmountElement = document.getElementById("totalAmount"); orderList.innerHTML = "";
+ 
+totalAmountElement.textContent = totalAmount.toFixed(2); order.forEach(function(item) {
+var listItem = document.createElement("li");
+listItem.textContent = item.name + " - $" + item.price.toFixed(2); orderList.appendChild(listItem);
+});
+showOrderSection();
+}
+
+
+function showOrderSection() {
+var orderSection = document.getElementById("orderSection"); orderSection.classList.remove("hidden");
+}
+
+
+function showFoodItemImages() {
+var foodItemImages = document.querySelectorAll(".food-item img"); foodItemImages.forEach(function(image) {
+image.classList.add("visible");
+});
+}
+
+
+function hideMenu() {
+var menuSection = document.getElementById("menuSection"); menuSection.classList.add("hidden");
+}
+</script>
+
+
+</body>
+</html>
